@@ -1,6 +1,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { ThemeProvider } from "@/components/theme-provider";
+import Link from 'next/link';
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +19,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+
+        <ThemeProvider attribute='class' defaultTheme='dark'>
+          <main className="flex flex-col items-center min-h-screen p-24">
+            <div className="z-10 items-center justify-between w-full max-w-5xl font-mono text-sm lg:flex">
+              <Link href='/' className='text-2xl text-bold'>PokemonCollection</Link>
+            </div>
+            {children}
+          </main>
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
