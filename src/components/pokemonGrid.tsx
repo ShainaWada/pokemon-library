@@ -25,11 +25,10 @@ export const PokemonGrid = ({ pokemonList }: PokemonGridProps) => {
     <>
       <div>
         <h3 className="py-6 text-2xl text-center">Search For Pokemon</h3>
-        <div className="grid w-full max-w-sm items-center gap-1.5">
+        <div className="grid w-full max-w-sm items-center gap-1.5 mb-12">
           <Label htmlFor="pokemonName">Pokemon Name</Label>
           <Input type="text" value={searchText} id="pokemonName" placeholder="Pikachu etc." onChange={(e) => setSearchText(e.target.value)} />
         </div>
-        <h3 className="pt-12 pb-6 text-3xl text-center ">PokemonCollection</h3>
       </div>
       <div className="grid mb-32 text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-3 lg:text-left">
         {filteredPokemonList.map((pokemon: any) => {

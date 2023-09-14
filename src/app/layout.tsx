@@ -24,7 +24,7 @@ export default function RootLayout({
         <ThemeProvider attribute='class' defaultTheme='dark'>
           <main className="flex flex-col items-center min-h-screen p-24">
             <div className="z-10 items-center justify-between w-full max-w-5xl font-mono text-sm lg:flex">
-              <Link href='/' className='text-2xl text-bold'>PokemonCollection</Link>
+              <Link href='/' className='text-2xl text-bold'>Pokemon Library</Link>
             </div>
             {children}
           </main>
