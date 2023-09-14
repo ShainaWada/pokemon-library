@@ -12,15 +12,12 @@ interface PokemonGridProps {
 export const PokemonGrid = ({ pokemonList }: PokemonGridProps) => {
   const [searchText, setSearchText] = useState("");
 
-
-  //filter the text
   const searchFilter = (pokemonList: any) => {
     return pokemonList.filter(
       (pokemon: any) => pokemon.name.toLowerCase().includes(searchText.toLowerCase())
     )
   }
 
-  //save filtered array of objects
   const filteredPokemonList = searchFilter(pokemonList)
   console.log(filteredPokemonList);
 
